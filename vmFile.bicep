@@ -5,15 +5,20 @@ param subnet1Name string = 'deploymentSubnet'
 param subnet1Address string = '10.0.1.0/24'
 param subnet2Name string = 'testingSubnet'
 param subnet2Address string = '10.0.2.0/24'
-param devVmSize string = 'Standard_D4s_v3'
-param testVmSize string = 'Standard_D2s_v3'
+param storageSubnet string = 'StorageSubnet'
+param storageSubAddress string = '10.0.3.0/24'
+param devVmSize string = 'Standard_B1s'  //'Standard_D4s_v3'
+param testVmSize string = 'Standard_B1s' //'Standard_D2s_v3'
+//unique name for storgae account
+param storageAccountName string = 'vmStorageAccount${uniqueString(resourceGroup().id)}'
+
 param adminUsername string
 @secure()
 param adminPassword string
 
 //num of vms 
-var deploymentVMCount = 100
-var testingVMCount = 30
+var deploymentVMCount = 2
+var testingVMCount = 1
 
 resource vnet 'Microsoft.Network/virtualNetworks@2021-05-01' = {
   name: vnetName
@@ -37,6 +42,13 @@ resource vnet 'Microsoft.Network/virtualNetworks@2021-05-01' = {
           addressPrefix: subnet2Address
         }
       }
+      {
+        name: storageSubnet
+        properties: {
+          addressPrefix: storageSubAddress
+        }
+      }
+
     ]
   }
 }
@@ -148,3 +160,41 @@ resource testingVMs 'Microsoft.Compute/virtualMachines@2021-11-01' = [for i in r
     }
   }
 }]
+
+resource storageAccount 'Microsoft.Storage/storageAccounts@2021-06-01' = {
+  name: take(storageAccountName, 24) //max 24 chars
+  location: location
+  sku: {
+    name: 'Standard_ZRS'
+  }
+  kind: 'StorageV2'
+  properties: {
+    //allow access only from the specified subnet 
+    //and deny all other traffic by default.
+    networkAcls: {
+      virtualNetworkRules: [
+        {
+          id: '${vnet.id}/subnets/${storageSubnet}'
+          action: 'Allow'
+        }
+      ]
+      defaultAction: 'Deny'
+    }
+    supportsHttpsTrafficOnly: true
+    accessTier: 'Hot'
+    encryption: {
+      services: {
+        file: {
+          keyType: 'Account'
+          enabled: true
+        }
+        blob: {
+          keyType: 'Account'
+          enabled: true
+        }
+      }
+     
+      keySource: 'Microsoft.Storage'
+    }
+  }
+}
