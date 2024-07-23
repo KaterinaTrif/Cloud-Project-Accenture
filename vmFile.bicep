@@ -11,8 +11,8 @@ param subnet2Address string = '10.0.1.0/24'
 param storageSubAddress string = '10.0.2.0/24'
 param bastionSubAdreess string = '10.0.3.0/27'
 
-param devVmSize string = 'Standard_B1s' //'Standard_D4s_v3'  //
-param testVmSize string = 'Standard_B1s' //'Standard_D2s_v3' // 
+param devVmSize string = 'Standard_D4s_v3'  
+param testVmSize string = 'Standard_D2s_v3' 
 //unique name for storgae account
 // unique name for storage account
 param storageAccountNamePrefix string = 'vmstorageacct'
@@ -26,8 +26,8 @@ param adminUsername string
 param adminPassword string
 
 //num of vms 
-var deploymentVMCount = 2
-var testingVMCount = 2
+var deploymentVMCount = 100
+var testingVMCount = 30
 
 resource vnet 'Microsoft.Network/virtualNetworks@2021-05-01' = {
   name: vnetName
