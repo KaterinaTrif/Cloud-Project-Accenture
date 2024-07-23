@@ -1,0 +1,43 @@
+{
+    "name": "nicPublic",
+    "id": "/subscriptions/3b167ca1-3556-4109-879b-48963c9569ab/resourceGroups/MultiSoftware/providers/Microsoft.Network/networkInterfaces/nicPublic",
+    "etag": "W/\"103f9e8d-623c-4867-b6a0-90efb237edfe\"",
+    "tags": {},
+    "properties": {
+        "provisioningState": "Succeeded",
+        "resourceGuid": "63dc1930-956d-4d7f-861b-8aab43a7b0b1",
+        "ipConfigurations": [
+            {
+                "name": "Ipv4config",
+                "id": "/subscriptions/3b167ca1-3556-4109-879b-48963c9569ab/resourceGroups/MultiSoftware/providers/Microsoft.Network/networkInterfaces/nicPublic/ipConfigurations/Ipv4config",
+                "etag": "W/\"103f9e8d-623c-4867-b6a0-90efb237edfe\"",
+                "type": "Microsoft.Network/networkInterfaces/ipConfigurations",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "privateIPAddress": "10.0.2.4",
+                    "privateIPAllocationMethod": "Dynamic",
+                    "subnet": {
+                        "id": "/subscriptions/3b167ca1-3556-4109-879b-48963c9569ab/resourceGroups/MultiSoftware/providers/Microsoft.Network/virtualNetworks/public-network/subnets/appservice"
+                    },
+                    "primary": true,
+                    "privateIPAddressVersion": "IPv4"
+                }
+            }
+        ],
+        "dnsSettings": {
+            "dnsServers": [],
+            "appliedDnsServers": [],
+            "internalDomainNameSuffix": "phrryofctvle1deellu44psb2d.parx.internal.cloudapp.net"
+        },
+        "enableAcceleratedNetworking": false,
+        "vnetEncryptionSupported": false,
+        "enableIPForwarding": false,
+        "hostedWorkloads": [],
+        "tapConfigurations": [],
+        "nicType": "Standard",
+        "auxiliaryMode": "None"
+    },
+    "type": "Microsoft.Network/networkInterfaces",
+    "location": "francecentral",
+    "kind": "Regular"
+}

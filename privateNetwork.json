@@ -1,0 +1,147 @@
+{
+    "name": "public-virtualnetwork",
+    "id": "/subscriptions/3b167ca1-3556-4109-879b-48963c9569ab/resourceGroups/MultiSoftware/providers/Microsoft.Network/virtualNetworks/public-virtualnetwork",
+    "etag": "W/\"76782c4c-164b-4de2-9362-75a41e0553f7\"",
+    "type": "Microsoft.Network/virtualNetworks",
+    "location": "francecentral",
+    "tags": {},
+    "properties": {
+        "provisioningState": "Succeeded",
+        "resourceGuid": "5563fde9-0a2c-49f7-a49d-18778f875c2c",
+        "addressSpace": {
+            "addressPrefixes": [
+                "10.0.0.0/16"
+            ]
+        },
+        "encryption": {
+            "enabled": true,
+            "enforcement": "AllowUnencrypted"
+        },
+        "subnets": [
+            {
+                "name": "default",
+                "id": "/subscriptions/3b167ca1-3556-4109-879b-48963c9569ab/resourceGroups/MultiSoftware/providers/Microsoft.Network/virtualNetworks/public-virtualnetwork/subnets/default",
+                "etag": "W/\"76782c4c-164b-4de2-9362-75a41e0553f7\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "addressPrefixes": [
+                        "10.0.0.0/24"
+                    ],
+                    "delegations": [],
+                    "privateEndpointNetworkPolicies": "Disabled",
+                    "privateLinkServiceNetworkPolicies": "Enabled"
+                },
+                "type": "Microsoft.Network/virtualNetworks/subnets"
+            },
+            {
+                "name": "AzureFirewallSubnet",
+                "id": "/subscriptions/3b167ca1-3556-4109-879b-48963c9569ab/resourceGroups/MultiSoftware/providers/Microsoft.Network/virtualNetworks/public-virtualnetwork/subnets/AzureFirewallSubnet",
+                "etag": "W/\"76782c4c-164b-4de2-9362-75a41e0553f7\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "addressPrefixes": [
+                        "10.0.1.0/26"
+                    ],
+                    "ipConfigurations": [
+                        {
+                            "id": "/subscriptions/3b167ca1-3556-4109-879b-48963c9569ab/resourceGroups/MULTISOFTWARE/providers/Microsoft.Network/azureFirewalls/PUBLIC-VIRTUALNETWORK-FIREWALL/azureFirewallIpConfigurations/IPCONFIG"
+                        }
+                    ],
+                    "delegations": [],
+                    "privateEndpointNetworkPolicies": "Disabled",
+                    "privateLinkServiceNetworkPolicies": "Enabled"
+                },
+                "type": "Microsoft.Network/virtualNetworks/subnets"
+            },
+            {
+                "name": "devopsTesting",
+                "id": "/subscriptions/3b167ca1-3556-4109-879b-48963c9569ab/resourceGroups/MultiSoftware/providers/Microsoft.Network/virtualNetworks/public-virtualnetwork/subnets/devopsTesting",
+                "etag": "W/\"76782c4c-164b-4de2-9362-75a41e0553f7\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "addressPrefixes": [
+                        "10.0.2.0/23"
+                    ],
+                    "delegations": [],
+                    "privateEndpointNetworkPolicies": "Disabled",
+                    "privateLinkServiceNetworkPolicies": "Enabled",
+                    "defaultOutboundAccess": false
+                },
+                "type": "Microsoft.Network/virtualNetworks/subnets"
+            },
+            {
+                "name": "devopsDevelopment",
+                "id": "/subscriptions/3b167ca1-3556-4109-879b-48963c9569ab/resourceGroups/MultiSoftware/providers/Microsoft.Network/virtualNetworks/public-virtualnetwork/subnets/devopsDevelopment",
+                "etag": "W/\"76782c4c-164b-4de2-9362-75a41e0553f7\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "addressPrefixes": [
+                        "10.0.4.0/23"
+                    ],
+                    "delegations": [],
+                    "privateEndpointNetworkPolicies": "Disabled",
+                    "privateLinkServiceNetworkPolicies": "Enabled",
+                    "defaultOutboundAccess": false
+                },
+                "type": "Microsoft.Network/virtualNetworks/subnets"
+            },
+            {
+                "name": "internalDBSubnet",
+                "id": "/subscriptions/3b167ca1-3556-4109-879b-48963c9569ab/resourceGroups/MultiSoftware/providers/Microsoft.Network/virtualNetworks/public-virtualnetwork/subnets/internalDBSubnet",
+                "etag": "W/\"76782c4c-164b-4de2-9362-75a41e0553f7\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "addressPrefixes": [
+                        "10.0.6.0/23"
+                    ],
+                    "natGateway": {
+                        "id": "/subscriptions/3b167ca1-3556-4109-879b-48963c9569ab/resourceGroups/MultiSoftware/providers/Microsoft.Network/natGateways/dbNATGateway"
+                    },
+                    "delegations": [],
+                    "privateEndpointNetworkPolicies": "Disabled",
+                    "privateLinkServiceNetworkPolicies": "Enabled",
+                    "defaultOutboundAccess": false
+                },
+                "type": "Microsoft.Network/virtualNetworks/subnets"
+            },
+            {
+                "name": "ServerLogs",
+                "id": "/subscriptions/3b167ca1-3556-4109-879b-48963c9569ab/resourceGroups/MultiSoftware/providers/Microsoft.Network/virtualNetworks/public-virtualnetwork/subnets/ServerLogs",
+                "etag": "W/\"76782c4c-164b-4de2-9362-75a41e0553f7\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "addressPrefixes": [
+                        "10.0.8.0/23"
+                    ],
+                    "delegations": [],
+                    "privateEndpointNetworkPolicies": "Disabled",
+                    "privateLinkServiceNetworkPolicies": "Enabled",
+                    "defaultOutboundAccess": false
+                },
+                "type": "Microsoft.Network/virtualNetworks/subnets"
+            },
+            {
+                "name": "AzureBastionSubnet",
+                "id": "/subscriptions/3b167ca1-3556-4109-879b-48963c9569ab/resourceGroups/MultiSoftware/providers/Microsoft.Network/virtualNetworks/public-virtualnetwork/subnets/AzureBastionSubnet",
+                "etag": "W/\"76782c4c-164b-4de2-9362-75a41e0553f7\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "addressPrefixes": [
+                        "10.0.1.64/26"
+                    ],
+                    "ipConfigurations": [
+                        {
+                            "id": "/subscriptions/3b167ca1-3556-4109-879b-48963c9569ab/resourceGroups/MULTISOFTWARE/providers/Microsoft.Network/bastionHosts/PUBLIC-VIRTUALNETWORK-BASTION/bastionHostIpConfigurations/IPCONF"
+                        }
+                    ],
+                    "delegations": [],
+                    "privateEndpointNetworkPolicies": "Disabled",
+                    "privateLinkServiceNetworkPolicies": "Enabled"
+                },
+                "type": "Microsoft.Network/virtualNetworks/subnets"
+            }
+        ],
+        "virtualNetworkPeerings": [],
+        "enableDdosProtection": false
+    }
+}
