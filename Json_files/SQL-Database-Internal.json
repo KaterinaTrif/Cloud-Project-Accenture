@@ -1,0 +1,42 @@
+{
+    "sku": {
+        "name": "HS_Gen5",
+        "tier": "Hyperscale",
+        "family": "Gen5",
+        "capacity": 2
+    },
+    "kind": "v12.0,user,vcore,hyperscale",
+    "properties": {
+        "collation": "SQL_Latin1_General_CP1_CI_AS",
+        "maxSizeBytes": -1,
+        "status": "Online",
+        "databaseId": "94195e9f-798c-4d11-ab93-3ae749db6226",
+        "creationDate": "2024-07-22T20:04:00.963Z",
+        "currentServiceObjectiveName": "HS_Gen5_2",
+        "requestedServiceObjectiveName": "HS_Gen5_2",
+        "defaultSecondaryLocation": "francesouth",
+        "catalogCollation": "SQL_Latin1_General_CP1_CI_AS",
+        "zoneRedundant": true,
+        "licenseType": "LicenseIncluded",
+        "earliestRestoreDate": "2024-07-22T20:04:00.963Z",
+        "readScale": "Enabled",
+        "highAvailabilityReplicaCount": 1,
+        "currentSku": {
+            "name": "HS_Gen5",
+            "tier": "Hyperscale",
+            "family": "Gen5",
+            "capacity": 2
+        },
+        "currentBackupStorageRedundancy": "Zone",
+        "requestedBackupStorageRedundancy": "Zone",
+        "maintenanceConfigurationId": "/subscriptions/3b167ca1-3556-4109-879b-48963c9569ab/providers/Microsoft.Maintenance/publicMaintenanceConfigurations/SQL_Default",
+        "isLedgerOn": false,
+        "isInfraEncryptionEnabled": false,
+        "availabilityZone": "NoPreference"
+    },
+    "location": "francecentral",
+    "tags": {},
+    "id": "/subscriptions/3b167ca1-3556-4109-879b-48963c9569ab/resourceGroups/MultiSoftware/providers/Microsoft.Sql/servers/sqldb-server3/databases/internaldbsql",
+    "name": "internaldbsql",
+    "type": "Microsoft.Sql/servers/databases"
+}
