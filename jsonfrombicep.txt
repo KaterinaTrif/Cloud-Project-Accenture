@@ -1,0 +1,312 @@
+Json from bicep
+
+ {
+  "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup",        
+  "location": "francecentral",
+  "managedBy": null,
+  "name": "newGroup",
+  "properties": {
+    "provisioningState": "Succeeded"
+  },
+  "tags": null,
+  "type": "Microsoft.Resources/resourceGroups"
+}
+PS C:\Users\Xrisa\Desktop\Cloud\GitRepo\Cloud-Project-Accenture> az deployment group create --resource-group newGroup --template-file vmFile.bicep --parameters adminUsername=AzureGTGHThess08 adminPassword=Spiti2310783085!
+{
+  "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Resources/deployments/vmFile",
+  "location": null,
+  "name": "vmFile",
+  "properties": {
+    "correlationId": "5bac50f1-cded-4297-80f5-d305500734de",
+    "debugSetting": null,
+    "dependencies": [
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Network/virtualNetworks/InternalVNet",
+            "resourceGroup": "newGroup",
+            "resourceName": "InternalVNet",
+            "resourceType": "Microsoft.Network/virtualNetworks"
+          },
+          {
+            "apiVersion": "2021-05-01",
+            "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Network/virtualNetworks/InternalVNet",
+            "resourceGroup": "newGroup",
+            "resourceName": "InternalVNet",
+            "resourceType": "Microsoft.Network/virtualNetworks"
+          }
+        ],
+        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Network/networkInterfaces/nic-deploy-0",
+        "resourceGroup": "newGroup",
+        "resourceName": "nic-deploy-0",
+        "resourceType": "Microsoft.Network/networkInterfaces"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Network/virtualNetworks/InternalVNet",
+            "resourceGroup": "newGroup",
+            "resourceName": "InternalVNet",
+            "resourceType": "Microsoft.Network/virtualNetworks"
+          },
+          {
+            "apiVersion": "2021-05-01",
+            "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Network/virtualNetworks/InternalVNet",
+            "resourceGroup": "newGroup",
+            "resourceName": "InternalVNet",
+            "resourceType": "Microsoft.Network/virtualNetworks"
+          }
+        ],
+        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Network/networkInterfaces/nic-deploy-1",
+        "resourceGroup": "newGroup",
+        "resourceName": "nic-deploy-1",
+        "resourceType": "Microsoft.Network/networkInterfaces"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Network/virtualNetworks/InternalVNet",
+            "resourceGroup": "newGroup",
+            "resourceName": "InternalVNet",
+            "resourceType": "Microsoft.Network/virtualNetworks"
+          },
+          {
+            "apiVersion": "2021-05-01",
+            "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Network/virtualNetworks/InternalVNet",
+            "resourceGroup": "newGroup",
+            "resourceName": "InternalVNet",
+            "resourceType": "Microsoft.Network/virtualNetworks"
+          }
+        ],
+        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Network/networkInterfaces/nic-test-0",
+        "resourceGroup": "newGroup",
+        "resourceName": "nic-test-0",
+        "resourceType": "Microsoft.Network/networkInterfaces"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Network/networkInterfaces/nic-deploy-0",
+            "resourceGroup": "newGroup",
+            "resourceName": "nic-deploy-0",
+            "resourceType": "Microsoft.Network/networkInterfaces"
+          }
+        ],
+        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Compute/virtualMachines/vm-deploy-0",
+        "resourceGroup": "newGroup",
+        "resourceName": "vm-deploy-0",
+        "resourceType": "Microsoft.Compute/virtualMachines"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Network/networkInterfaces/nic-deploy-1",
+            "resourceGroup": "newGroup",
+            "resourceName": "nic-deploy-1",
+            "resourceType": "Microsoft.Network/networkInterfaces"
+          }
+        ],
+        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Compute/virtualMachines/vm-deploy-1",
+        "resourceGroup": "newGroup",
+        "resourceName": "vm-deploy-1",
+        "resourceType": "Microsoft.Compute/virtualMachines"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Network/networkInterfaces/nic-test-0",
+            "resourceGroup": "newGroup",
+            "resourceName": "nic-test-0",
+            "resourceType": "Microsoft.Network/networkInterfaces"
+          }
+        ],
+        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Compute/virtualMachines/vm-test-0",
+        "resourceGroup": "newGroup",
+        "resourceName": "vm-test-0",
+        "resourceType": "Microsoft.Compute/virtualMachines"
+      }
+    ],
+    "duration": "PT2M21.6735748S",
+    "error": null,
+    "mode": "Incremental",
+    "onErrorDeployment": null,
+    "outputResources": [
+      {
+        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Compute/virtualMachines/vm-deploy-0",
+        "resourceGroup": "newGroup"
+      },
+      {
+        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Compute/virtualMachines/vm-deploy-1",
+        "resourceGroup": "newGroup"
+      },
+      {
+        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Compute/virtualMachines/vm-test-0",
+        "resourceGroup": "newGroup"
+      },
+      {
+        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Network/networkInterfaces/nic-deploy-0",
+        "resourceGroup": "newGroup"
+      },
+      {
+        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Network/networkInterfaces/nic-deploy-1",
+        "resourceGroup": "newGroup"
+      },
+      {
+        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Network/networkInterfaces/nic-test-0",
+        "resourceGroup": "newGroup"
+      },
+      {
+        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Network/virtualNetworks/InternalVNet",
+        "resourceGroup": "newGroup"
+      },
+      {
+        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Storage/storageAccounts/vmstorageacctkhtkjt2qh7i",
+        "resourceGroup": "newGroup"
+      }
+    ],
+    "outputs": null,
+    "parameters": {
+      "adminPassword": {
+        "type": "SecureString"
+      },
+      "adminUsername": {
+        "type": "String",
+        "value": "AzureGTGHThess08"
+      },
+      "devVmSize": {
+        "type": "String",
+        "value": "Standard_B1s"
+      },
+      "location": {
+        "type": "String",
+        "value": "francecentral"
+      },
+      "storageAccountNamePrefix": {
+        "type": "String",
+        "value": "vmstorageacct"
+      },
+      "storageSubAddress": {
+        "type": "String",
+        "value": "10.0.3.0/24"
+      },
+      "storageSubnet": {
+        "type": "String",
+        "value": "StorageSubnet"
+      },
+      "subnet1Address": {
+        "type": "String",
+        "value": "10.0.1.0/24"
+      },
+      "subnet1Name": {
+        "type": "String",
+        "value": "deploymentSubnet"
+      },
+      "subnet2Address": {
+        "type": "String",
+        "value": "10.0.2.0/24"
+      },
+      "subnet2Name": {
+        "type": "String",
+        "value": "testingSubnet"
+      },
+      "testVmSize": {
+        "type": "String",
+        "value": "Standard_B1s"
+      },
+      "vnetAddress": {
+        "type": "String",
+        "value": "10.0.0.0/16"
+      },
+      "vnetName": {
+        "type": "String",
+        "value": "InternalVNet"
+      }
+    },
+    "parametersLink": null,
+    "providers": [
+      {
+        "id": null,
+        "namespace": "Microsoft.Network",
+        "providerAuthorizationConsentState": null,
+        "registrationPolicy": null,
+        "registrationState": null,
+        "resourceTypes": [
+          {
+            "aliases": null,
+            "apiProfiles": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "defaultApiVersion": null,
+            "locationMappings": null,
+            "locations": [
+              "francecentral"
+            ],
+            "properties": null,
+            "resourceType": "virtualNetworks",
+            "zoneMappings": null
+          },
+          {
+            "aliases": null,
+            "apiProfiles": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "defaultApiVersion": null,
+            "locationMappings": null,
+            "locations": [
+              "francecentral"
+            ],
+            "properties": null,
+            "resourceType": "networkInterfaces",
+            "zoneMappings": null
+          }
+        ]
+      },
+      {
+        "id": null,
+        "namespace": "Microsoft.Storage",
+        "providerAuthorizationConsentState": null,
+        "registrationPolicy": null,
+        "registrationState": null,
+        "resourceTypes": [
+          {
+            "aliases": null,
+            "apiProfiles": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "defaultApiVersion": null,
+            "locationMappings": null,
+            "locations": [
+              "francecentral"
+            ],
+            "properties": null,
+            "resourceType": "storageAccounts",
+            "zoneMappings": null
+          }
+        ]
+      },
+      {
+        "id": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "defaultApiVersion": null,
+            "locationMappings": null,
+            "locations": [
+              "francecentral"
+            ],
+            "properties": null,
+            "resourceType": "virtualMachines",
+            "zoneMappings": null
+          }
+        ]
+      }
+    ],
+    "provisioningState": "Succeeded",
+    "templateHash": "18321629398110627412",
+    "templateLink": null,
+    "timestamp": "2024-07-23T08:22:25.803325+00:00",
+    "validatedResources": null
+  },
+  "resourceGroup": "newGroup",
+  "tags": null,
+  "type": "Microsoft.Resources/deployments"
+}
