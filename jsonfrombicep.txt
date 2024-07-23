@@ -1,167 +1,225 @@
 Json from bicep
-
- {
-  "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup",        
-  "location": "francecentral",
-  "managedBy": null,
-  "name": "newGroup",
-  "properties": {
-    "provisioningState": "Succeeded"
-  },
-  "tags": null,
-  "type": "Microsoft.Resources/resourceGroups"
-}
-PS C:\Users\Xrisa\Desktop\Cloud\GitRepo\Cloud-Project-Accenture> az deployment group create --resource-group newGroup --template-file vmFile.bicep --parameters adminUsername=AzureGTGHThess08 adminPassword=Spiti2310783085!
 {
-  "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Resources/deployments/vmFile",
+  "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup2/providers/Microsoft.Resources/deployments/vmFile",
   "location": null,
   "name": "vmFile",
   "properties": {
-    "correlationId": "5bac50f1-cded-4297-80f5-d305500734de",
+    "correlationId": "4b072cda-6b9a-4776-8a71-4f44db22e759",
     "debugSetting": null,
     "dependencies": [
       {
         "dependsOn": [
           {
-            "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Network/virtualNetworks/InternalVNet",
-            "resourceGroup": "newGroup",
+            "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup2/providers/Microsoft.Network/publicIPAddresses/Bastion-pip",
+            "resourceGroup": "newGroup2",
+            "resourceName": "Bastion-pip",
+            "resourceType": "Microsoft.Network/publicIPAddresses"
+          },
+          {
+            "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup2/providers/Microsoft.Network/virtualNetworks/InternalVNet",
+            "resourceGroup": "newGroup2",
+            "resourceName": "InternalVNet",
+            "resourceType": "Microsoft.Network/virtualNetworks"
+          }
+        ],
+        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup2/providers/Microsoft.Network/bastionHosts/Bastion",
+        "resourceGroup": "newGroup2",
+        "resourceName": "Bastion",
+        "resourceType": "Microsoft.Network/bastionHosts"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup2/providers/Microsoft.Network/virtualNetworks/InternalVNet",
+            "resourceGroup": "newGroup2",
             "resourceName": "InternalVNet",
             "resourceType": "Microsoft.Network/virtualNetworks"
           },
           {
             "apiVersion": "2021-05-01",
-            "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Network/virtualNetworks/InternalVNet",
-            "resourceGroup": "newGroup",
+            "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup2/providers/Microsoft.Network/virtualNetworks/InternalVNet",
+            "resourceGroup": "newGroup2",
             "resourceName": "InternalVNet",
             "resourceType": "Microsoft.Network/virtualNetworks"
           }
         ],
-        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Network/networkInterfaces/nic-deploy-0",
-        "resourceGroup": "newGroup",
+        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup2/providers/Microsoft.Network/networkInterfaces/nic-deploy-0",
+        "resourceGroup": "newGroup2",
         "resourceName": "nic-deploy-0",
         "resourceType": "Microsoft.Network/networkInterfaces"
       },
       {
         "dependsOn": [
           {
-            "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Network/virtualNetworks/InternalVNet",
-            "resourceGroup": "newGroup",
+            "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup2/providers/Microsoft.Network/virtualNetworks/InternalVNet",
+            "resourceGroup": "newGroup2",
             "resourceName": "InternalVNet",
             "resourceType": "Microsoft.Network/virtualNetworks"
           },
           {
             "apiVersion": "2021-05-01",
-            "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Network/virtualNetworks/InternalVNet",
-            "resourceGroup": "newGroup",
+            "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup2/providers/Microsoft.Network/virtualNetworks/InternalVNet",
+            "resourceGroup": "newGroup2",
             "resourceName": "InternalVNet",
             "resourceType": "Microsoft.Network/virtualNetworks"
           }
         ],
-        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Network/networkInterfaces/nic-deploy-1",
-        "resourceGroup": "newGroup",
+        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup2/providers/Microsoft.Network/networkInterfaces/nic-deploy-1",
+        "resourceGroup": "newGroup2",
         "resourceName": "nic-deploy-1",
         "resourceType": "Microsoft.Network/networkInterfaces"
       },
       {
         "dependsOn": [
           {
-            "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Network/virtualNetworks/InternalVNet",
-            "resourceGroup": "newGroup",
+            "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup2/providers/Microsoft.Network/virtualNetworks/InternalVNet",
+            "resourceGroup": "newGroup2",
             "resourceName": "InternalVNet",
             "resourceType": "Microsoft.Network/virtualNetworks"
           },
           {
             "apiVersion": "2021-05-01",
-            "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Network/virtualNetworks/InternalVNet",
-            "resourceGroup": "newGroup",
+            "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup2/providers/Microsoft.Network/virtualNetworks/InternalVNet",
+            "resourceGroup": "newGroup2",
             "resourceName": "InternalVNet",
             "resourceType": "Microsoft.Network/virtualNetworks"
           }
         ],
-        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Network/networkInterfaces/nic-test-0",
-        "resourceGroup": "newGroup",
+        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup2/providers/Microsoft.Network/networkInterfaces/nic-test-0",
+        "resourceGroup": "newGroup2",
         "resourceName": "nic-test-0",
         "resourceType": "Microsoft.Network/networkInterfaces"
       },
       {
         "dependsOn": [
           {
-            "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Network/networkInterfaces/nic-deploy-0",
-            "resourceGroup": "newGroup",
+            "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup2/providers/Microsoft.Network/virtualNetworks/InternalVNet",
+            "resourceGroup": "newGroup2",
+            "resourceName": "InternalVNet",
+            "resourceType": "Microsoft.Network/virtualNetworks"
+          },
+          {
+            "apiVersion": "2021-05-01",
+            "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup2/providers/Microsoft.Network/virtualNetworks/InternalVNet",
+            "resourceGroup": "newGroup2",
+            "resourceName": "InternalVNet",
+            "resourceType": "Microsoft.Network/virtualNetworks"
+          }
+        ],
+        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup2/providers/Microsoft.Network/networkInterfaces/nic-test-1",
+        "resourceGroup": "newGroup2",
+        "resourceName": "nic-test-1",
+        "resourceType": "Microsoft.Network/networkInterfaces"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup2/providers/Microsoft.Network/networkInterfaces/nic-deploy-0",
+            "resourceGroup": "newGroup2",
             "resourceName": "nic-deploy-0",
             "resourceType": "Microsoft.Network/networkInterfaces"
           }
         ],
-        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Compute/virtualMachines/vm-deploy-0",
-        "resourceGroup": "newGroup",
+        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup2/providers/Microsoft.Compute/virtualMachines/vm-deploy-0",
+        "resourceGroup": "newGroup2",
         "resourceName": "vm-deploy-0",
         "resourceType": "Microsoft.Compute/virtualMachines"
       },
       {
         "dependsOn": [
           {
-            "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Network/networkInterfaces/nic-deploy-1",
-            "resourceGroup": "newGroup",
+            "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup2/providers/Microsoft.Network/networkInterfaces/nic-deploy-1",
+            "resourceGroup": "newGroup2",
             "resourceName": "nic-deploy-1",
             "resourceType": "Microsoft.Network/networkInterfaces"
           }
         ],
-        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Compute/virtualMachines/vm-deploy-1",
-        "resourceGroup": "newGroup",
+        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup2/providers/Microsoft.Compute/virtualMachines/vm-deploy-1",
+        "resourceGroup": "newGroup2",
         "resourceName": "vm-deploy-1",
         "resourceType": "Microsoft.Compute/virtualMachines"
       },
       {
         "dependsOn": [
           {
-            "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Network/networkInterfaces/nic-test-0",
-            "resourceGroup": "newGroup",
+            "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup2/providers/Microsoft.Network/networkInterfaces/nic-test-0",
+            "resourceGroup": "newGroup2",
             "resourceName": "nic-test-0",
             "resourceType": "Microsoft.Network/networkInterfaces"
           }
         ],
-        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Compute/virtualMachines/vm-test-0",
-        "resourceGroup": "newGroup",
+        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup2/providers/Microsoft.Compute/virtualMachines/vm-test-0",
+        "resourceGroup": "newGroup2",
         "resourceName": "vm-test-0",
+        "resourceType": "Microsoft.Compute/virtualMachines"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup2/providers/Microsoft.Network/networkInterfaces/nic-test-1",
+            "resourceGroup": "newGroup2",
+            "resourceName": "nic-test-1",
+            "resourceType": "Microsoft.Network/networkInterfaces"
+          }
+        ],
+        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup2/providers/Microsoft.Compute/virtualMachines/vm-test-1",
+        "resourceGroup": "newGroup2",
+        "resourceName": "vm-test-1",
         "resourceType": "Microsoft.Compute/virtualMachines"
       }
     ],
-    "duration": "PT2M21.6735748S",
+    "duration": "PT6M30.711259S",
     "error": null,
     "mode": "Incremental",
     "onErrorDeployment": null,
     "outputResources": [
       {
-        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Compute/virtualMachines/vm-deploy-0",
-        "resourceGroup": "newGroup"
+        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup2/providers/Microsoft.Compute/virtualMachines/vm-deploy-0",
+        "resourceGroup": "newGroup2"
       },
       {
-        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Compute/virtualMachines/vm-deploy-1",
-        "resourceGroup": "newGroup"
+        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup2/providers/Microsoft.Compute/virtualMachines/vm-deploy-1",
+        "resourceGroup": "newGroup2"
       },
       {
-        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Compute/virtualMachines/vm-test-0",
-        "resourceGroup": "newGroup"
+        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup2/providers/Microsoft.Compute/virtualMachines/vm-test-0",
+        "resourceGroup": "newGroup2"
       },
       {
-        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Network/networkInterfaces/nic-deploy-0",
-        "resourceGroup": "newGroup"
+        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup2/providers/Microsoft.Compute/virtualMachines/vm-test-1",
+        "resourceGroup": "newGroup2"
       },
       {
-        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Network/networkInterfaces/nic-deploy-1",
-        "resourceGroup": "newGroup"
+        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup2/providers/Microsoft.Network/bastionHosts/Bastion",
+        "resourceGroup": "newGroup2"
       },
       {
-        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Network/networkInterfaces/nic-test-0",
-        "resourceGroup": "newGroup"
+        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup2/providers/Microsoft.Network/networkInterfaces/nic-deploy-0",
+        "resourceGroup": "newGroup2"
       },
       {
-        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Network/virtualNetworks/InternalVNet",
-        "resourceGroup": "newGroup"
+        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup2/providers/Microsoft.Network/networkInterfaces/nic-deploy-1",
+        "resourceGroup": "newGroup2"
       },
       {
-        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup/providers/Microsoft.Storage/storageAccounts/vmstorageacctkhtkjt2qh7i",
-        "resourceGroup": "newGroup"
+        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup2/providers/Microsoft.Network/networkInterfaces/nic-test-0",
+        "resourceGroup": "newGroup2"
+      },
+      {
+        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup2/providers/Microsoft.Network/networkInterfaces/nic-test-1",
+        "resourceGroup": "newGroup2"
+      },
+      {
+        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup2/providers/Microsoft.Network/publicIPAddresses/Bastion-pip",
+        "resourceGroup": "newGroup2"
+      },
+      {
+        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup2/providers/Microsoft.Network/virtualNetworks/InternalVNet",
+        "resourceGroup": "newGroup2"
+      },
+      {
+        "id": "/subscriptions/e51233cd-a5b4-4142-bb14-481b7d9fbf52/resourceGroups/newGroup2/providers/Microsoft.Storage/storageAccounts/vmstorageacct6lznwb64t7n",
+        "resourceGroup": "newGroup2"
       }
     ],
     "outputs": null,
@@ -172,6 +230,14 @@ PS C:\Users\Xrisa\Desktop\Cloud\GitRepo\Cloud-Project-Accenture> az deployment g
       "adminUsername": {
         "type": "String",
         "value": "AzureGTGHThess08"
+      },
+      "bastionName": {
+        "type": "String",
+        "value": "Bastion"
+      },
+      "bastionSubAdreess": {
+        "type": "String",
+        "value": "10.0.3.0/27"
       },
       "devVmSize": {
         "type": "String",
@@ -187,7 +253,7 @@ PS C:\Users\Xrisa\Desktop\Cloud\GitRepo\Cloud-Project-Accenture> az deployment g
       },
       "storageSubAddress": {
         "type": "String",
-        "value": "10.0.3.0/24"
+        "value": "10.0.2.0/24"
       },
       "storageSubnet": {
         "type": "String",
@@ -195,7 +261,7 @@ PS C:\Users\Xrisa\Desktop\Cloud\GitRepo\Cloud-Project-Accenture> az deployment g
       },
       "subnet1Address": {
         "type": "String",
-        "value": "10.0.1.0/24"
+        "value": "10.0.0.0/24"
       },
       "subnet1Name": {
         "type": "String",
@@ -203,7 +269,7 @@ PS C:\Users\Xrisa\Desktop\Cloud\GitRepo\Cloud-Project-Accenture> az deployment g
       },
       "subnet2Address": {
         "type": "String",
-        "value": "10.0.2.0/24"
+        "value": "10.0.1.0/24"
       },
       "subnet2Name": {
         "type": "String",
@@ -215,7 +281,7 @@ PS C:\Users\Xrisa\Desktop\Cloud\GitRepo\Cloud-Project-Accenture> az deployment g
       },
       "vnetAddress": {
         "type": "String",
-        "value": "10.0.0.0/16"
+        "value": "10.0.0.0/22"
       },
       "vnetName": {
         "type": "String",
@@ -243,6 +309,34 @@ PS C:\Users\Xrisa\Desktop\Cloud\GitRepo\Cloud-Project-Accenture> az deployment g
             ],
             "properties": null,
             "resourceType": "virtualNetworks",
+            "zoneMappings": null
+          },
+          {
+            "aliases": null,
+            "apiProfiles": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "defaultApiVersion": null,
+            "locationMappings": null,
+            "locations": [
+              "francecentral"
+            ],
+            "properties": null,
+            "resourceType": "publicIPAddresses",
+            "zoneMappings": null
+          },
+          {
+            "aliases": null,
+            "apiProfiles": null,
+            "apiVersions": null,
+            "capabilities": null,
+            "defaultApiVersion": null,
+            "locationMappings": null,
+            "locations": [
+              "francecentral"
+            ],
+            "properties": null,
+            "resourceType": "bastionHosts",
             "zoneMappings": null
           },
           {
@@ -286,6 +380,14 @@ PS C:\Users\Xrisa\Desktop\Cloud\GitRepo\Cloud-Project-Accenture> az deployment g
       },
       {
         "id": null,
+        "namespace": "Microsoft.Compute",
+        "providerAuthorizationConsentState": null,
+        "registrationPolicy": null,
+        "registrationState": null,
+        "resourceTypes": [
+          {
+            "aliases": null,
+            "apiProfiles": null,
             "apiVersions": null,
             "capabilities": null,
             "defaultApiVersion": null,
@@ -301,12 +403,12 @@ PS C:\Users\Xrisa\Desktop\Cloud\GitRepo\Cloud-Project-Accenture> az deployment g
       }
     ],
     "provisioningState": "Succeeded",
-    "templateHash": "18321629398110627412",
+    "templateHash": "11336365438157598787",
     "templateLink": null,
-    "timestamp": "2024-07-23T08:22:25.803325+00:00",
+    "timestamp": "2024-07-23T10:37:07.423764+00:00",
     "validatedResources": null
   },
-  "resourceGroup": "newGroup",
+  "resourceGroup": "newGroup2",
   "tags": null,
   "type": "Microsoft.Resources/deployments"
 }

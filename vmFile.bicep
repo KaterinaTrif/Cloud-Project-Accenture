@@ -1,14 +1,18 @@
 param location string = resourceGroup().location
 param vnetName string = 'InternalVNet'
-param vnetAddress string = '10.0.0.0/16'
 param subnet1Name string = 'deploymentSubnet'
-param subnet1Address string = '10.0.1.0/24'
 param subnet2Name string = 'testingSubnet'
-param subnet2Address string = '10.0.2.0/24'
 param storageSubnet string = 'StorageSubnet'
-param storageSubAddress string = '10.0.3.0/24'
-param devVmSize string = 'Standard_D4s_v3'  //'Standard_B1s'
-param testVmSize string = 'Standard_D2s_v3' //'Standard_B1s' 
+param bastionName string = 'Bastion'
+
+param vnetAddress string = '10.0.0.0/22'
+param subnet1Address string = '10.0.0.0/24'
+param subnet2Address string = '10.0.1.0/24'
+param storageSubAddress string = '10.0.2.0/24'
+param bastionSubAdreess string = '10.0.3.0/27'
+
+param devVmSize string = 'Standard_B1s' //'Standard_D4s_v3'  //
+param testVmSize string = 'Standard_B1s' //'Standard_D2s_v3' // 
 //unique name for storgae account
 // unique name for storage account
 param storageAccountNamePrefix string = 'vmstorageacct'
@@ -22,8 +26,8 @@ param adminUsername string
 param adminPassword string
 
 //num of vms 
-var deploymentVMCount = 100
-var testingVMCount = 30
+var deploymentVMCount = 2
+var testingVMCount = 2
 
 resource vnet 'Microsoft.Network/virtualNetworks@2021-05-01' = {
   name: vnetName
@@ -53,10 +57,50 @@ resource vnet 'Microsoft.Network/virtualNetworks@2021-05-01' = {
           addressPrefix: storageSubAddress
         }
       }
+      {
+        name: 'AzureBastionSubnet'
+        properties: {
+          addressPrefix: bastionSubAdreess
+        }
+      }
 
     ]
   }
 }
+
+// Create a public IP for Bastion
+resource bastionPublicIP 'Microsoft.Network/publicIPAddresses@2021-05-01' = {
+  name: '${bastionName}-pip'
+  location: location
+  sku: {
+    name: 'Standard'
+  }
+  properties: {
+    publicIPAllocationMethod: 'Static'
+  }
+}
+
+// Create the Bastion host
+resource bastionHost 'Microsoft.Network/bastionHosts@2021-05-01' = {
+  name: bastionName
+  location: location
+  properties: {
+    ipConfigurations: [
+      {
+        name: 'IpConf'
+        properties: {
+          subnet: {
+            id: '${vnet.id}/subnets/AzureBastionSubnet'
+          }
+          publicIPAddress: {
+            id: bastionPublicIP.id
+          }
+        }
+      }
+    ]
+  }
+}
+
 
 resource deploymentNics 'Microsoft.Network/networkInterfaces@2021-05-01' = [for i in range(0, deploymentVMCount): {
   name: 'nic-deploy-${i}'
