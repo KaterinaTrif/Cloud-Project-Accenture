@@ -1,4 +1,4 @@
-# MultiSoftware Enterprise Cloud Transition
+# MultiSoftware Cloud Infrastructure Solution
 
 ## Overview
 MultiSoftware Enterprise is a multinational software company of 350 people headquartered in Athens, Greece. This project focuses on transitioning from a dated on-premises architecture to a cloud environment hosted on Microsoft Azure. This repository contains all necessary files in order to design and implement the cloud infrastructure for the company.
