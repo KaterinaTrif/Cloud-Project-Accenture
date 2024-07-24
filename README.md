@@ -23,7 +23,7 @@ The Billing directory includes the estimated monthly billing of Azure services i
 The Draw.io directory contains the Azure Infrastructure Architectural diagram of the overall cloud solution, which was implemented with the application draw.io. It highlighting the interaction between services like VMs, web app, API, storage account, networking, security, database, entra ID, kubernetes, firewall, nsg, bastion key vault, communication service and monitoring.
 #### 4. Json Files
 The Json Files directory contains the implemented services through Azure Portal in .json format.
-#### 5. Screεnshots
+#### 5. Screenshots
 The Screenshots directory contains images of the services, that was implemented through Azure Portal.
 
 
