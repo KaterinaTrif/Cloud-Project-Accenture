@@ -1,0 +1,23 @@
+{
+    "id": "/subscriptions/3b167ca1-3556-4109-879b-48963c9569ab/resourceGroups/MultiSoftware/providers/Microsoft.KeyVault/vaults/KeyVaultMultisoftware",
+    "name": "KeyVaultMultisoftware",
+    "type": "Microsoft.KeyVault/vaults",
+    "location": "francecentral",
+    "tags": {},
+    "properties": {
+        "sku": {
+            "family": "A",
+            "name": "Standard"
+        },
+        "tenantId": "b1732512-60e5-48fb-92e8-8d6902ac1349",
+        "accessPolicies": [],
+        "enabledForDeployment": true,
+        "enabledForDiskEncryption": true,
+        "enabledForTemplateDeployment": true,
+        "enableSoftDelete": true,
+        "softDeleteRetentionInDays": 90,
+        "enableRbacAuthorization": true,
+        "vaultUri": "https://keyvaultmultisoftware.vault.azure.net/",
+        "provisioningState": "Succeeded"
+    }
+}
