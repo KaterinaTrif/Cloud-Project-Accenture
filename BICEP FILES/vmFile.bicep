@@ -11,7 +11,7 @@ param subnet2Address string = '10.0.1.0/24'
 param storageSubAddress string = '10.0.2.0/24'
 param bastionSubAdreess string = '10.0.3.0/27'
 
-param devVmSize string = 'Standard_D4s_v3'  
+param devVmSize string = 'Standard_D4s_v4'  
 param testVmSize string = 'Standard_D2s_v3' 
 //unique name for storgae account
 // unique name for storage account
