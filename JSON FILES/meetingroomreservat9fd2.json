@@ -1,0 +1,55 @@
+{
+    "sku": {
+        "name": "Standard_LRS",
+        "tier": "Standard"
+    },
+    "kind": "Storage",
+    "id": "/subscriptions/480076d2-7676-4245-a639-6d4723a0b625/resourceGroups/MeetingRoomReservationSystem/providers/Microsoft.Storage/storageAccounts/meetingroomreservat9fd2",
+    "name": "meetingroomreservat9fd2",
+    "type": "Microsoft.Storage/storageAccounts",
+    "location": "francecentral",
+    "tags": {},
+    "properties": {
+        "defaultToOAuthAuthentication": true,
+        "keyCreationTime": {
+            "key1": "2024-07-23T07:36:24.0097529Z",
+            "key2": "2024-07-23T07:36:24.0097529Z"
+        },
+        "allowCrossTenantReplication": false,
+        "privateEndpointConnections": [],
+        "minimumTlsVersion": "TLS1_2",
+        "allowBlobPublicAccess": false,
+        "networkAcls": {
+            "bypass": "AzureServices",
+            "virtualNetworkRules": [],
+            "ipRules": [],
+            "defaultAction": "Allow"
+        },
+        "supportsHttpsTrafficOnly": true,
+        "encryption": {
+            "services": {
+                "file": {
+                    "keyType": "Account",
+                    "enabled": true,
+                    "lastEnabledTime": "2024-07-23T07:36:24.1972467Z"
+                },
+                "blob": {
+                    "keyType": "Account",
+                    "enabled": true,
+                    "lastEnabledTime": "2024-07-23T07:36:24.1972467Z"
+                }
+            },
+            "keySource": "Microsoft.Storage"
+        },
+        "provisioningState": "Succeeded",
+        "creationTime": "2024-07-23T07:36:23.9628780Z",
+        "primaryEndpoints": {
+            "blob": "https://meetingroomreservat9fd2.blob.core.windows.net/",
+            "queue": "https://meetingroomreservat9fd2.queue.core.windows.net/",
+            "table": "https://meetingroomreservat9fd2.table.core.windows.net/",
+            "file": "https://meetingroomreservat9fd2.file.core.windows.net/"
+        },
+        "primaryLocation": "francecentral",
+        "statusOfPrimary": "available"
+    }
+}
