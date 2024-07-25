@@ -1,0 +1,63 @@
+{
+    "sku": {
+        "name": "Standard_ZRS",
+        "tier": "Standard"
+    },
+    "kind": "StorageV2",
+    "id": "/subscriptions/480076d2-7676-4245-a639-6d4723a0b625/resourceGroups/9.StorageOfComparyWebsite/providers/Microsoft.Storage/storageAccounts/companywebsitestuff",
+    "name": "companywebsitestuff",
+    "type": "Microsoft.Storage/storageAccounts",
+    "location": "francecentral",
+    "tags": {},
+    "properties": {
+        "dnsEndpointType": "Standard",
+        "defaultToOAuthAuthentication": false,
+        "publicNetworkAccess": "Enabled",
+        "keyCreationTime": {
+            "key1": "2024-07-21T21:37:51.9015765Z",
+            "key2": "2024-07-21T21:37:51.9015765Z"
+        },
+        "allowCrossTenantReplication": false,
+        "privateEndpointConnections": [],
+        "minimumTlsVersion": "TLS1_2",
+        "allowBlobPublicAccess": true,
+        "allowSharedKeyAccess": true,
+        "largeFileSharesState": "Enabled",
+        "networkAcls": {
+            "bypass": "AzureServices",
+            "virtualNetworkRules": [],
+            "ipRules": [],
+            "defaultAction": "Allow"
+        },
+        "supportsHttpsTrafficOnly": true,
+        "encryption": {
+            "requireInfrastructureEncryption": false,
+            "services": {
+                "file": {
+                    "keyType": "Account",
+                    "enabled": true,
+                    "lastEnabledTime": "2024-07-21T21:37:52.2765743Z"
+                },
+                "blob": {
+                    "keyType": "Account",
+                    "enabled": true,
+                    "lastEnabledTime": "2024-07-21T21:37:52.2765743Z"
+                }
+            },
+            "keySource": "Microsoft.Storage"
+        },
+        "accessTier": "Hot",
+        "provisioningState": "Succeeded",
+        "creationTime": "2024-07-21T21:37:51.8547025Z",
+        "primaryEndpoints": {
+            "dfs": "https://companywebsitestuff.dfs.core.windows.net/",
+            "web": "https://companywebsitestuff.z28.web.core.windows.net/",
+            "blob": "https://companywebsitestuff.blob.core.windows.net/",
+            "queue": "https://companywebsitestuff.queue.core.windows.net/",
+            "table": "https://companywebsitestuff.table.core.windows.net/",
+            "file": "https://companywebsitestuff.file.core.windows.net/"
+        },
+        "primaryLocation": "francecentral",
+        "statusOfPrimary": "available"
+    }
+}

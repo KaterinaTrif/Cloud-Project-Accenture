@@ -1,0 +1,121 @@
+{
+    "id": "/subscriptions/480076d2-7676-4245-a639-6d4723a0b625/resourceGroups/MeetingRoomReservationSystem/providers/Microsoft.DocumentDB/databaseAccounts/meetingroomreservationsystem-cosmosdb",
+    "name": "meetingroomreservationsystem-cosmosdb",
+    "location": "France Central",
+    "type": "Microsoft.DocumentDB/databaseAccounts",
+    "kind": "GlobalDocumentDB",
+    "tags": {
+        "defaultExperience": "Core (SQL)",
+        "hidden-cosmos-mmspecial": ""
+    },
+    "systemData": {
+        "createdAt": "2024-07-23T07:46:09.4892875Z"
+    },
+    "properties": {
+        "provisioningState": "Succeeded",
+        "documentEndpoint": "https://meetingroomreservationsystem-cosmosdb.documents.azure.com:443/",
+        "sqlEndpoint": "https://meetingroomreservationsystem-cosmosdb.documents.azure.com:443/",
+        "publicNetworkAccess": "Enabled",
+        "enableAutomaticFailover": false,
+        "enableMultipleWriteLocations": true,
+        "enablePartitionKeyMonitor": false,
+        "isVirtualNetworkFilterEnabled": false,
+        "virtualNetworkRules": [],
+        "EnabledApiTypes": "Sql",
+        "disableKeyBasedMetadataWriteAccess": false,
+        "enableFreeTier": true,
+        "enableAnalyticalStorage": false,
+        "analyticalStorageConfiguration": {
+            "schemaType": "WellDefined"
+        },
+        "instanceId": "4ba0e632-278b-469a-b7bd-4dad398bf59c",
+        "databaseAccountOfferType": "Standard",
+        "enableMaterializedViews": false,
+        "defaultIdentity": "FirstPartyIdentity",
+        "networkAclBypass": "None",
+        "disableLocalAuth": false,
+        "enablePartitionMerge": false,
+        "enableBurstCapacity": false,
+        "minimalTlsVersion": "Tls12",
+        "consistencyPolicy": {
+            "defaultConsistencyLevel": "Session",
+            "maxIntervalInSeconds": 5,
+            "maxStalenessPrefix": 100
+        },
+        "configurationOverrides": {
+            "EnablePerRegionPerPartitionAutoscaleOptIn": "True"
+        },
+        "writeLocations": [
+            {
+                "id": "meetingroomreservationsystem-cosmosdb-francecentral",
+                "locationName": "France Central",
+                "documentEndpoint": "https://meetingroomreservationsystem-cosmosdb-francecentral.documents.azure.com:443/",
+                "provisioningState": "Succeeded",
+                "failoverPriority": 0,
+                "isZoneRedundant": true
+            }
+        ],
+        "readLocations": [
+            {
+                "id": "meetingroomreservationsystem-cosmosdb-francecentral",
+                "locationName": "France Central",
+                "documentEndpoint": "https://meetingroomreservationsystem-cosmosdb-francecentral.documents.azure.com:443/",
+                "provisioningState": "Succeeded",
+                "failoverPriority": 0,
+                "isZoneRedundant": true
+            }
+        ],
+        "locations": [
+            {
+                "id": "meetingroomreservationsystem-cosmosdb-francecentral",
+                "locationName": "France Central",
+                "documentEndpoint": "https://meetingroomreservationsystem-cosmosdb-francecentral.documents.azure.com:443/",
+                "provisioningState": "Succeeded",
+                "failoverPriority": 0,
+                "isZoneRedundant": true
+            }
+        ],
+        "failoverPolicies": [
+            {
+                "id": "meetingroomreservationsystem-cosmosdb-francecentral",
+                "locationName": "France Central",
+                "failoverPriority": 0
+            }
+        ],
+        "cors": [],
+        "capabilities": [],
+        "ipRules": [],
+        "backupPolicy": {
+            "type": "Periodic",
+            "periodicModeProperties": {
+                "backupIntervalInMinutes": 240,
+                "backupRetentionIntervalInHours": 8,
+                "backupStorageRedundancy": "Zone"
+            }
+        },
+        "networkAclBypassResourceIds": [],
+        "diagnosticLogSettings": {
+            "enableFullTextQuery": "None"
+        },
+        "capacity": {
+            "totalThroughputLimit": 1000
+        },
+        "keysMetadata": {
+            "primaryMasterKey": {
+                "generationTime": "2024-07-23T07:46:09.4892875Z"
+            },
+            "secondaryMasterKey": {
+                "generationTime": "2024-07-23T07:46:09.4892875Z"
+            },
+            "primaryReadonlyMasterKey": {
+                "generationTime": "2024-07-23T07:46:09.4892875Z"
+            },
+            "secondaryReadonlyMasterKey": {
+                "generationTime": "2024-07-23T07:46:09.4892875Z"
+            }
+        }
+    },
+    "identity": {
+        "type": "None"
+    }
+}
